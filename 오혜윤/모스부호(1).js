@@ -28,5 +28,5 @@ const morse = {
 };
 function solution(letter) {
   const arr = letter.split(" ");
-  return arr.map((a) => morse[a] || "").reduce((a, b) => a + b);
+  return arr.map((a) => morse[a] || "").join("");
 }
