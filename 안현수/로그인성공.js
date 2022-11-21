@@ -1,3 +1,4 @@
+// https://school.programmers.co.kr/learn/courses/30/lessons/120883
 function solution(id_pw, db) {
   for (let i = 0; i < db.length; i++) {
     if (id_pw[0] === db[i][0]) {
