@@ -1,12 +1,10 @@
 function solution(order) {
-  var answer = 0;
-  const order_string = order.toString();
+  let answer = 0;
+  const orderString = order.toString();
 
-  for (let i = 0; i < order_string.length; i++) {
-    if (
-      parseInt(order_string[i]) % 3 === 0 &&
-      parseInt(order_string[i]) !== 0
-    ) {
+  for (let i = 0; i < orderString.length; i += 1) {
+    const multipleOfThree = parseInt(orderString[i]);
+    if (multipleOfThree && multipleOfThree % 3 === 0) {
       answer += 1;
     }
   }

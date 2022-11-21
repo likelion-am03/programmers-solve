@@ -27,6 +27,6 @@ const morse = {
   "--..": "z",
 };
 function solution(letter) {
-  const arr = letter.split(" ");
-  return arr.map((a) => morse[a] || "").reduce((a, b) => a + b);
+  const morseList = letter.split(" ");
+  return morseList.map((m) => morse[m] || "").join("");
 }
