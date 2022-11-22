@@ -1,19 +1,13 @@
 //https://school.programmers.co.kr/learn/courses/30/lessons/120883
 function solution(id_pw, db) {
-  let answer = "";
-  for (let i = 0; i < db.length; i += 1) {
-    if (id_pw[0] === db[i][0]) {
-      if (id_pw[1] === db[i][1]) {
-        answer = "login";
-        break;
+  for (const [id, pw] of db) {
+    if (id_pw[0] === id) {
+      if (id_pw[1] === pw) {
+        return "login";
       } else {
-        answer = "wrong pw";
-        break;
+        return "wrong pw";
       }
-    } else {
-      answer = "fail";
     }
   }
-  return answer;
+  return "fail";
 }
-
